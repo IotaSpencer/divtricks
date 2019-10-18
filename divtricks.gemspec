@@ -31,6 +31,8 @@ Gem::Specification.new do |spec|
   spec.executables << 'test-divtricks'
   spec.require_paths = ['lib']
   spec.add_runtime_dependency 'super_callbacks', '>= 1.3.1'
+  spec.add_runtime_dependency 'after_do', '~> 0.4.0'
   spec.add_development_dependency 'bundler', '>= 1.16'
-  spec.add_development_dependency 'rake', '>= 10'¸ '< 13'
+  spec.add_development_dependency 'pry', '~> 0.12.2'
+  spec.add_development_dependency 'rake', '>= 10', '< 13'
 end
