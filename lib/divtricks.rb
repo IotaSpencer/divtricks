@@ -16,23 +16,36 @@ class String
   end
 
   def div2
-    self.to_i(10).even?
+    self.to_i.even?
   end
 
   def div3
-    self.to_i.to_s.split(/\S/)
+    intermediate = self.to_i.to_s.split(//).map{|i| i.send(:to_i)}.sum
+    if intermediate.to_i > 12 
+      intermediate.to_s.div3
+    end
+    if intermediate.remainder(3) == 0
+      true
+    else false
+    end
 
   end
+  # @returns [Boolean] whether **self** is divisible by 4
   def div4
-
+    self.slice(-2,2).to_i.remainder(4) == 0 ? true : false
   end
   def div5
-    if self.ends_with(5) or self.ends_with(0)
+    if self.to_s&.end_with?(5.to_s) or self.to_s&.end_with?(0.to_s)
+      true
+    else
+      false
     end
 
   end
   def div6
     if self.div2 and self.div3
+      true
+    else false
     end
 
   end
@@ -40,13 +53,20 @@ class String
 
   end
   def div8
-
+    self.to_s.
   end
   def div9
-
+    intermediate = self.to_i.to_s.split(//).map{|i| i.send(:to_i)}.sum
+    if intermediate.to_i > 12 
+      intermediate.to_s.div9
+    end
+    if intermediate.remainder(9) == 0
+      true
+    else false
+    end
   end
   def div10
-
+    self.to_s&.end_with?('0') ? true : false
   end
   def div11
 
