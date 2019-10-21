@@ -29,7 +29,7 @@ module DivTricks
     end
     def self.run
       i = 1
-      until i == LIMIT5 do
+      until i == LIMIT4 do
         DivTricks::RunThrough.go(i)
         i += 1
       end

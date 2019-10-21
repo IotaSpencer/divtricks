@@ -53,7 +53,7 @@ class String
 
   end
   def div8
-    self.to_s.
+    self.to_s.slice(-3, 3)
   end
   def div9
     intermediate = self.to_i.to_s.split(//).map{|i| i.send(:to_i)}.sum
